@@ -6,10 +6,23 @@
      <List />
      <Events  @my-event="onMyEvent"/>
      <conditional />
-        <CustomInput v-model="value"/>
+     <CustomInput v-model="value"/>
     <span>{{value}}</span>
     <Directives />
     <Lifecycle />
+    <Model />
+    <Props :name="'Antonio'" :apellido="'Peinado'" />
+    <templates />
+    <Slots>
+      <p>aquí por defecto</p>
+      <template v-slot:arriba>
+        <p>aquí pinto la parte de arriba</p>
+      </template>
+      <template #abajo>
+        <p>aquí pinto la parte de abajo</p>
+      </template>
+     </Slots>
+     <Watch />
   </div>
 </template>
 
@@ -22,6 +35,11 @@ import Conditional from './examples/Conditional.vue';
 import CustomInput from './examples/CustomInput';
 import Directives from './examples/Directive';
 import Lifecycle from './examples/Lifecycle';
+import Model from './examples/Model.vue';
+import Props from './examples/Props.vue';
+import Templates from './examples/Template.vue';
+import Slots from './examples/Slots.vue';
+import Watch from './examples/Watch';
 export default {
   name: 'App',
   components: {
@@ -32,7 +50,13 @@ export default {
   Conditional,
   CustomInput,
   Directives,
-  Lifecycle
+  Lifecycle,
+  Model,
+  Props,
+  Templates,
+  Slots,
+  Watch
+   
   },
     methods: {
     onMyEvent(a) {
