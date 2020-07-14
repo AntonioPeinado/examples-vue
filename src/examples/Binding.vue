@@ -1,13 +1,12 @@
 <template>
   <div>
-<template>
-  <div>
     <h2>Binding</h2>
     <!-- attribute binding (v-bind === :) -->
     <button :disabled="true" :foo="1">Disabled</button>
     <!-- event binding (v-on === @) -->
     <button @click="onClick">Click</button>
   </div>
+
 </template>
 
 <script>
@@ -18,6 +17,11 @@ export default {
     onClick(ev){
       console.log(ev);
     },
-  }
+  } 
 };
 </script>   
+<style scoped>
+h2 {
+    color:green;
+}
+</style>
