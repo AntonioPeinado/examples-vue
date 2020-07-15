@@ -1,4 +1,6 @@
 <template>
+<div>
+  <h2>Login</h2>
   <form @submit.prevent.stop="onSubmit">
     <div>
       <label :for="emailId">Email:</label>
@@ -25,6 +27,7 @@
     <!-- <FormField name="email" id="email" label="Email:" v-model="email" type="text" validators="[isEmail]" >-->
     <button>Submit</button>
   </form>
+  </div>
 </template>
 <script>
 import uuid from "uuid";
@@ -34,17 +37,16 @@ const isEmail = (value, msg = "Formato de email incorrecto") => {
   );
   return isValidEmail ? "" : msg;
 };
+//formato de password min 6 mayusculas, minusculas y caracteres
 const isPassword = (value, msg = "Formato de password incorrecto") => {
-  const isValidPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/.test(
-    value
-  );
-  return isValidPassword ? "" : msg;
+  const isValidPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6}$/.test(value);
+        return isValidPassword ? "" : msg;
 };
 export default {
   data() {
     return {
       emailId: uuid,
-      passwordId: uuid,
+     passwordId: uuid, 
       email: "",
       password: "",
       emailError: "",
@@ -55,9 +57,9 @@ export default {
     onSubmit() {
       this.validateForm();
       if (this.isFormValid()) {
-        return console.log({ email: this.email, password: this.password });
-      }
-    },
+            return console.log({ email: this.email, password: this.password });
+        }
+         },
     validateForm() {
       this.validateEmail();
       this.validatePassword();
