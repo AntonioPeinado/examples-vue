@@ -83,5 +83,9 @@ export default {
 <style scoped>
 h2 {
   color: darkblue;
+  background-color: aqua;
+}
+form {
+  color:rgb(23, 8, 236);
 }
 </style>
