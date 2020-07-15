@@ -37,9 +37,9 @@ const isEmail = (value, msg = "Formato de email incorrecto") => {
   );
   return isValidEmail ? "" : msg;
 };
-//formato de password min 6 mayusculas, minusculas y caracteres
+//formato de password min 6, max 15, mayusculas, minusculas y (caracteres opcionales)
 const isPassword = (value, msg = "Formato de password incorrecto") => {
-  const isValidPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6}$/.test(value);
+  const isValidPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,15}$/.test(value);
         return isValidPassword ? "" : msg;
 };
 export default {
