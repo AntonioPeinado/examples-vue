@@ -2,7 +2,13 @@
   <form @submit.prevent.stop="onSubmit">
     <div>
       <label :for="emailId">Email:</label>
-      <input :id="emailId" name="email" @blur="validateEmail" v-model="email" type="text" />
+      <input 
+      :id="emailId" 
+      name="email" 
+      @blur="validateEmail" 
+      v-model="email" 
+      type="text" 
+      />
       <p role="alert" v-if="emailError">{{emailError}}</p>
     </div>
     <div>
@@ -17,7 +23,7 @@
       <p role="alert" v-if="passwordError">{{passwordError}}</p>
     </div>
     <!-- <FormField name="email" id="email" label="Email:" v-model="email" type="text" validators="[isEmail]" >-->
-    <button @click="onSubmit">Submit</button>
+    <button>Submit</button>
   </form>
 </template>
 <script>
@@ -54,7 +60,8 @@ export default {
     },
     validateForm() {
       this.validateEmail();
-      this.validatePassword()
+      this.validatePassword();
+      
     },
     isFormValid() {
       return !this.emailError && !this.passwordError;
