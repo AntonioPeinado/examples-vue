@@ -9,7 +9,7 @@
      <CustomInput v-model="value"/>
     <span>{{value}}</span>
     <Directives />
-    <Lifecycle />
+    <!--<Lifecycle />-->
     <Model />
     <Props :name="'Antonio'" :apellido="'Peinado'" />
     <templates />
@@ -23,6 +23,8 @@
       </template>
      </Slots>
      <Watch />
+     <HolaMundo />
+     <Login />
   </div>
 </template>
 
@@ -34,12 +36,14 @@ import Events from './examples/Events.vue';
 import Conditional from './examples/Conditional.vue';
 import CustomInput from './examples/CustomInput';
 import Directives from './examples/Directive';
-import Lifecycle from './examples/Lifecycle';
+//import Lifecycle from './examples/Lifecycle';
 import Model from './examples/Model.vue';
 import Props from './examples/Props.vue';
 import Templates from './examples/Template.vue';
 import Slots from './examples/Slots.vue';
 import Watch from './examples/Watch';
+import HolaMundo from './ejerciciospracticos/holaMundo.vue';
+import Login from './ejerciciospracticos/login.vue';
 export default {
   name: 'App',
   components: {
@@ -50,24 +54,27 @@ export default {
   Conditional,
   CustomInput,
   Directives,
-  Lifecycle,
+ // Lifecycle,
   Model,
   Props,
   Templates,
   Slots,
-  Watch
-   
+  Watch,
+  HolaMundo,
+  Login 
   },
     methods: {
     onMyEvent(a) {
       alert(a);
     }
   },
+ 
    data(){
     return {
       value: ''
     }
-  }
+  },
+
 }
 </script>
 
