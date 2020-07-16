@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Ejemplos vue</h1>
+   <!-- <h1>Ejemplos vue</h1>
      <Binding />
      <Computed />
      <List />
@@ -9,7 +9,7 @@
      <CustomInput v-model="value"/>
     <span>{{value}}</span>
     <Directives />
-    <!--<Lifecycle />-->
+    <Lifecycle />
     <Model />
     <Props :name="'Antonio'" :apellido="'Peinado'" />
     <templates />
@@ -24,44 +24,47 @@
      </Slots>
      <Watch />
      <HolaMundo />
-     <Login />
+     <Login />-->
+     <LoginV />
   </div>
 </template>
 
 <script>
-import Binding from "./examples/Binding.vue";
-import Computed from "./examples/Computed.vue";
-import List from "./examples/List.vue";
-import Events from './examples/Events.vue';
-import Conditional from './examples/Conditional.vue';
-import CustomInput from './examples/CustomInput';
-import Directives from './examples/Directive';
+//import Binding from "./examples/Binding.vue";
+//import Computed from "./examples/Computed.vue";
+//import List from "./examples/List.vue";
+//import Events from './examples/Events.vue';
+//import Conditional from './examples/Conditional.vue';
+//import CustomInput from './examples/CustomInput';
+//import Directives from './examples/Directive';
 //import Lifecycle from './examples/Lifecycle';
-import Model from './examples/Model.vue';
-import Props from './examples/Props.vue';
-import Templates from './examples/Template.vue';
-import Slots from './examples/Slots.vue';
-import Watch from './examples/Watch';
-import HolaMundo from './ejerciciospracticos/holaMundo.vue';
-import Login from './ejerciciospracticos/login.vue';
+//import Model from './examples/Model.vue';
+//import Props from './examples/Props.vue';
+//import Templates from './examples/Template.vue';
+//import Slots from './examples/Slots.vue';
+//import Watch from './examples/Watch';
+//import HolaMundo from './ejerciciospracticos/holaMundo.vue';
+//import Login from './ejerciciospracticos/login.vue';
+import LoginV from './vuex/loginVuex';
 export default {
   name: 'App',
   components: {
-  Binding,
-  Computed,
-  List,
-  Events,
-  Conditional,
-  CustomInput,
-  Directives,
+ // Binding,
+ // Computed,
+ //List,
+ // Events,
+ // Conditional,
+ // CustomInput,
+ // Directives,
  // Lifecycle,
-  Model,
-  Props,
-  Templates,
-  Slots,
-  Watch,
-  HolaMundo,
-  Login 
+ // Model,
+ // Props,
+ // Templates,
+ // Slots,
+ // Watch,
+ // HolaMundo,
+ // Login,
+  LoginV 
   },
     methods: {
     onMyEvent(a) {
